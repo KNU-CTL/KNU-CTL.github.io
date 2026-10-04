@@ -7,7 +7,6 @@
     "title_en": "Our team website is now online",
     "summary_ko": "세미나, 발표, 논문 소식을 이곳에서 전합니다.",
     "summary_en": "News on seminars, talks, and publications will be posted here.",
-    "cover": "",
     "body_ko": "<p>KNU Coding Theory Team 홈페이지를 열었습니다. 앞으로 정규 세미나 일정, 학회 발표, 논문 게재 소식을 이곳에서 전합니다.</p><p>연구팀은 대수적 부호이론을 중심으로 삭제부호, DNA 부호, 양자정보이론을 연구합니다.</p>",
     "body_en": "<p>The KNU Coding Theory Team website is now online. We will post regular seminar schedules, conference talks, and publication news here.</p><p>Centered on algebraic coding theory, the team studies deletion codes, DNA codes, and quantum information theory.</p>"
   },
@@ -19,20 +18,18 @@
     "title_en": "Student seminar: talks by five undergraduate researchers",
     "summary_ko": "이상구, 양재승, 헨리 로베르토, 박예지, 장환희 학생이 발표했습니다.",
     "summary_en": "Sanggu Lee, Jaeseung Yang, Henrry Roberto, Yeji Park, and Hwanhee Jang gave talks.",
-    "cover": "",
     "body_ko": "<p>10월 2일(금) 정규 연구생 세미나에서 이상구, 양재승, 헨리 로베르토, 박예지, 장환희 학생이 각자의 연구를 발표했습니다.</p>",
     "body_en": "<p>At the regular student seminar on Friday, October 2, Sanggu Lee, Jaeseung Yang, Henrry Roberto, Yeji Park, and Hwanhee Jang presented their research.</p>"
   },
   {
     "id": "2026-riken",
-    "date": "2026-07-01",
+    "date": "2026-08-10",
     "category": "news",
     "title_ko": "RIKEN AIP 연수",
     "title_en": "Research visit at RIKEN AIP",
     "summary_ko": "김지혁 학생이 일본 RIKEN AIP에서 연수를 마쳤습니다.",
     "summary_en": "Jihyeok Kim completed a research visit at RIKEN AIP, Japan.",
-    "cover": "",
-    "body_ko": "<p>김지혁 학생이 일본 RIKEN AIP에서 연수를 마쳤습니다.</p>",
-    "body_en": "<p>Jihyeok Kim completed a research visit at RIKEN AIP, Japan.</p>"
+    "body_ko": "<p>우리 연구팀의 김지혁 석사과정생이 일본 RIKEN AIP에서 연수를 마쳤습니다.</p>",
+    "body_en": "<p>Jihyeok Kim, a master student,  completed a research visit at RIKEN AIP, Japan.</p>"
   }
 ]
