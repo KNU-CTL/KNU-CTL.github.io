@@ -1,0 +1,233 @@
+# Pages CMS 설정 (https://pagescms.org/docs/configuration/)
+# app.pagescms.org 에 GitHub 계정으로 들어가 이 저장소를 고르면, 아래 항목이 입력 양식으로 나타납니다.
+# 공개 원칙: 진행 중인 세부 연구 주제·결과·발표 제목·자료는 적지 않습니다. 이 저장소는 공개됩니다.
+
+media:
+  input: media
+  output: /media
+  rename: safe
+  categories: [image]
+
+content:
+  # ---------- 최근 소식(뉴스레터) ----------
+  - name: news
+    label: "최근 소식 (뉴스레터)"
+    type: file
+    path: content/news.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: "주소용 이름 (영문·숫자·하이픈, 예: 2026-10-15-seminar)"
+        type: string
+        required: true
+        pattern: '^[a-z0-9-]+$'
+      - name: date
+        label: "날짜"
+        type: date
+        required: true
+      - name: category
+        label: "종류"
+        type: select
+        options:
+          values:
+            - { name: seminar, label: "세미나" }
+            - { name: talk, label: "학회 발표" }
+            - { name: paper, label: "논문 게재" }
+            - { name: patent, label: "특허" }
+            - { name: news, label: "소식" }
+      - { name: title_ko, label: "제목 (한국어)", type: string, required: true }
+      - { name: title_en, label: "제목 (영어)", type: string }
+      - { name: summary_ko, label: "한 줄 요약 (한국어)", type: text }
+      - { name: summary_en, label: "한 줄 요약 (영어)", type: text }
+      - name: cover
+        label: "대표 그림 (선택)"
+        type: image
+      - name: body_ko
+        label: "본문 (한국어)"
+        type: rich-text
+        options: { format: html }
+      - name: body_en
+        label: "본문 (영어)"
+        type: rich-text
+        options: { format: html }
+
+  # ---------- 정규 세미나(캘린더) ----------
+  - name: seminar
+    label: "정규 세미나"
+    type: file
+    path: content/seminar.json
+    format: json
+    fields:
+      - { name: from, label: "학기 시작일", type: date }
+      - { name: to, label: "학기 마지막 날", type: date }
+      - name: series
+        label: "정규 세미나 (매주 열리는 세미나)"
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "아이디 (영문, 바꾸지 마세요. 세미나를 새로 만들면 아래 선택 목록에도 추가)", type: string, required: true, pattern: '^[a-z0-9-]+$' }
+          - { name: title_ko, label: "세미나 이름 (한국어)", type: string, required: true }
+          - { name: title_en, label: "세미나 이름 (영어)", type: string }
+          - { name: desc_ko, label: "한 줄 설명 (한국어, 선택)", type: string }
+          - { name: desc_en, label: "한 줄 설명 (영어, 선택)", type: string }
+          - name: weekday
+            label: "요일"
+            type: select
+            options:
+              values:
+                - { name: "1", label: "월요일" }
+                - { name: "2", label: "화요일" }
+                - { name: "3", label: "수요일" }
+                - { name: "4", label: "목요일" }
+                - { name: "5", label: "금요일" }
+          - { name: time, label: "시간 (예: 11:30–13:00)", type: string }
+          - { name: place_ko, label: "장소 (한국어, 선택)", type: string }
+          - { name: place_en, label: "장소 (영어, 선택)", type: string }
+      - name: sessions
+        label: "발표 일정 (날짜별 발표자)"
+        type: object
+        list: true
+        fields:
+          - { name: date, label: "날짜", type: date, required: true }
+          - name: series
+            label: "어느 세미나"
+            type: select
+            options:
+              values:
+                - { name: lunch, label: "점심 세미나 (월)" }
+                - { name: undergrad, label: "학부연구생 세미나 (수)" }
+                - { name: researcher, label: "연구원 세미나 (목)" }
+                - { name: student, label: "연구생 세미나 (금)" }
+          - { name: speaker, label: "발표자 (여러 명이면 쉼표로)", type: string }
+          - name: topic
+            label: "분야 (선택)"
+            type: select
+            options:
+              values:
+                - { name: coding, label: "오류 정정 부호" }
+                - { name: quantum, label: "양자 정보" }
+                - { name: dna, label: "DNA 부호" }
+                - { name: algebra, label: "대수와 조합론" }
+                - { name: open, label: "그 외 관심 주제" }
+          - { name: title_ko, label: "행사 이름 (정규 세미나가 아닌 행사만, 한국어)", type: string }
+          - { name: title_en, label: "행사 이름 (영어)", type: string }
+      - name: cancel
+        label: "휴강"
+        type: object
+        list: true
+        fields:
+          - { name: date, label: "날짜", type: date, required: true }
+          - name: series
+            label: "어느 세미나 (비우면 그날 모든 세미나 휴강)"
+            type: select
+            options:
+              values:
+                - { name: lunch, label: "점심 세미나 (월)" }
+                - { name: undergrad, label: "학부연구생 세미나 (수)" }
+                - { name: researcher, label: "연구원 세미나 (목)" }
+                - { name: student, label: "연구생 세미나 (금)" }
+
+  # ---------- 구성원 ----------
+  - name: people
+    label: "구성원"
+    type: file
+    path: content/people.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: "이름 (한국어)", type: string, required: true }
+      - { name: name_en, label: "이름 (영어)", type: string }
+      - name: role
+        label: "구분"
+        type: select
+        options:
+          values:
+            - { name: pi, label: "책임교수" }
+            - { name: postdoc, label: "박사후연구원" }
+            - { name: grad, label: "대학원생" }
+            - { name: undergrad, label: "학부연구생" }
+            - { name: alumni, label: "졸업생" }
+      - name: degree
+        label: "과정 (대학원생만)"
+        type: select
+        options:
+          values:
+            - { name: ms, label: "석사과정" }
+            - { name: phd, label: "박사과정" }
+      - { name: interests, label: "관심 분야 (큰 분야만)", type: string, list: true }
+      - { name: email, label: "메일", type: string }
+      - { name: homepage, label: "홈페이지 주소", type: string }
+      - { name: photo, label: "사진 (정사각형 권장)", type: image }
+
+  # ---------- 출간 ----------
+  - name: publications
+    label: "출간 (학술지·학술대회 발표·특허)"
+    type: file
+    path: content/publications.json
+    format: json
+    list: true
+    fields:
+      - name: type
+        label: "분류"
+        type: select
+        options:
+          values:
+            - { name: journal, label: "학술지" }
+            - { name: conference, label: "학술대회 발표" }
+            - { name: patent, label: "특허" }
+      - { name: year, label: "연도", type: number }
+      - { name: title, label: "제목", type: string, required: true }
+      - { name: authors, label: "저자 (특허는 발명자)", type: string }
+      - { name: venue, label: "학술지·학회 이름 (특허는 번호)", type: string }
+      - { name: doi, label: "DOI 주소", type: string }
+      - { name: pdf, label: "PDF 주소", type: string }
+      - { name: arxiv, label: "arXiv 주소", type: string }
+      - { name: abstract, label: "초록", type: text }
+      - { name: bibtex, label: "BibTeX", type: text }
+      - { name: example, label: "예시 항목 (실제 항목은 끄기)", type: boolean }
+
+  # ---------- 연구 분야 ----------
+  - name: research
+    label: "연구 분야"
+    type: file
+    path: content/research.json
+    format: json
+    list: true
+    fields:
+      - { name: id, label: "아이디 (영문, 바꾸지 마세요)", type: string, readonly: true }
+      - { name: title_ko, label: "이름 (한국어)", type: string }
+      - { name: title_en, label: "이름 (영어)", type: string }
+      - { name: short_ko, label: "첫 화면 한 줄 설명 (한국어)", type: string }
+      - { name: short_en, label: "첫 화면 한 줄 설명 (영어)", type: string }
+      - { name: detail_ko, label: "자세한 설명 (한국어, 빈 줄로 문단 나눔)", type: text }
+      - { name: detail_en, label: "자세한 설명 (영어)", type: text }
+      - { name: keywords, label: "키워드", type: string, list: true }
+
+  # ---------- 연구팀 기본 정보 ----------
+  - name: site
+    label: "연구팀 기본 정보 (하단 정보 포함)"
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: name, label: "연구팀 이름 (영어)", type: string }
+      - { name: name_ko, label: "연구팀 이름 (한국어)", type: string }
+      - { name: affiliation_ko, label: "소속 (한국어, 하단에 표시)", type: string }
+      - { name: affiliation_en, label: "소속 (영어)", type: string }
+      - { name: tagline_ko, label: "첫 화면 한 줄 (한국어)", type: string }
+      - { name: tagline_en, label: "첫 화면 한 줄 (영어)", type: string }
+      - { name: intro_ko, label: "연구팀 소개 (한국어)", type: text }
+      - { name: intro_en, label: "연구팀 소개 (영어)", type: text }
+      - { name: email, label: "대표 메일", type: string }
+      - { name: address_ko, label: "위치 (한국어, 하단에 표시)", type: string }
+      - { name: address_en, label: "위치 (영어)", type: string }
+      - { name: join_headline_ko, label: "참여 안내 제목 (한국어)", type: string }
+      - { name: join_headline_en, label: "참여 안내 제목 (영어)", type: string }
+      - name: join_points
+        label: "참여 안내 항목"
+        type: object
+        list: true
+        fields:
+          - { name: ko, label: "한국어", type: string }
+          - { name: en, label: "영어", type: string }
