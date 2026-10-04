@@ -1,0 +1,70 @@
+[
+  {
+    "id": "coding",
+    "title_ko": "오류 정정 부호",
+    "title_en": "Error-Correcting Codes",
+    "short_ko": "잡음과 소실 속에서도 정보를 지키는 부호",
+    "short_en": "Protecting information against noise and erasures",
+    "detail_ko": "통신 채널과 저장 장치에서는 비트가 바뀌거나 사라지는 오류가 끊임없이 생깁니다. 오류 정정 부호는 정보에 여분을 덧붙여, 받는 쪽이 오류를 스스로 찾아 고칠 수 있게 합니다.\n\n우리 연구팀은 유한체와 환 위의 대수적 구조를 이용해 좋은 부호를 구성하고, 부호의 크기·거리·부호율 사이의 한계를 연구합니다. 대체 오류뿐 아니라 기호가 사라지는 삭제 오류처럼 다루기 어려운 오류 모형도 연구합니다.",
+    "detail_en": "Bits are flipped or lost all the time in communication channels and storage devices. Error-correcting codes add redundancy so that the receiver can detect and correct errors on its own.\n\nWe construct good codes using algebraic structures over finite fields and rings, and study the fundamental trade-offs among size, distance, and rate. Beyond substitution errors, we also study harder error models such as deletions.",
+    "keywords": [
+      "Algebraic codes",
+      "Bounds",
+      "Deletion channels"
+    ]
+  },
+  {
+    "id": "quantum",
+    "title_ko": "양자 정보",
+    "title_en": "Quantum Information",
+    "short_ko": "양자 컴퓨터와 양자 통신을 위한 부호와 암호",
+    "short_en": "Codes and cryptography for quantum computing and communication",
+    "detail_ko": "양자 컴퓨터의 큐비트는 주변 환경과의 작은 상호작용에도 쉽게 망가집니다. 양자 오류 정정 부호는 여러 큐비트에 정보를 나누어 담아, 계산이 끝날 때까지 양자 정보를 지킵니다.\n\n우리 연구팀은 고전 부호이론의 방법을 양자 오류 정정 부호와 그 부호화 회로에 적용하고, 양자역학의 원리로 안전성을 보장하는 양자키분배의 원리와 안전성도 공부합니다.",
+    "detail_en": "Qubits in a quantum computer are easily disturbed by tiny interactions with their environment. Quantum error-correcting codes spread information over many qubits and protect it throughout a computation.\n\nWe bring methods from classical coding theory to quantum error-correcting codes and their encoding circuits, and we also study quantum key distribution, whose security rests on the laws of quantum mechanics.",
+    "keywords": [
+      "Quantum error correction",
+      "Quantum circuits",
+      "Quantum key distribution"
+    ]
+  },
+  {
+    "id": "dna",
+    "title_ko": "DNA 부호",
+    "title_en": "DNA Codes",
+    "short_ko": "DNA에 정보를 저장하고 읽기 위한 부호",
+    "short_en": "Coding for DNA-based data storage",
+    "detail_ko": "DNA는 아주 작은 부피에 막대한 정보를 오래 담을 수 있는 차세대 저장 매체입니다. 그러나 DNA를 합성하고 읽는 과정에서는 염기가 바뀌거나, 빠지거나, 끼어드는 오류가 생기고, 특정 염기 배열은 다루기 어렵습니다.\n\n우리 연구팀은 이러한 오류를 고치고 생화학적 제약을 만족하는 DNA 부호를 연구합니다. 삽입·삭제 정정 부호와 제약 부호가 주요 도구입니다.",
+    "detail_en": "DNA is a next-generation storage medium that can hold enormous amounts of data in a tiny volume for a long time. However, synthesis and sequencing introduce substitutions, deletions, and insertions, and certain base patterns are hard to handle.\n\nWe study DNA codes that correct these errors while satisfying biochemical constraints, using insertion/deletion-correcting codes and constrained codes as main tools.",
+    "keywords": [
+      "DNA storage",
+      "Insertion/deletion codes",
+      "Constrained codes"
+    ]
+  },
+  {
+    "id": "algebra",
+    "title_ko": "대수와 조합론",
+    "title_en": "Algebra & Combinatorics",
+    "short_ko": "부호이론을 떠받치는 수학",
+    "short_en": "The mathematics behind coding theory",
+    "detail_ko": "좋은 부호의 존재와 구성은 유한체, 환, 군의 대수적 구조와 그래프, 설계 같은 조합론적 대상과 깊이 맞닿아 있습니다.\n\n우리 연구팀은 부호이론에서 생기는 대수·조합론 문제와, 거꾸로 부호이론의 방법으로 접근할 수 있는 수학 문제를 함께 연구합니다.",
+    "detail_en": "The existence and construction of good codes are deeply tied to algebraic structures such as finite fields, rings, and groups, and to combinatorial objects such as graphs and designs.\n\nWe work on algebraic and combinatorial problems that arise in coding theory, as well as mathematical problems that can be approached with coding-theoretic methods.",
+    "keywords": [
+      "Finite fields & rings",
+      "Graph theory",
+      "Designs"
+    ]
+  },
+  {
+    "id": "open",
+    "title_ko": "그 외 관심 주제",
+    "title_en": "Open Topics",
+    "short_ko": "그 외 학생이 관심 있는 모든 주제",
+    "short_en": "Any other topic students are interested in",
+    "detail_ko": "위의 네 분야에 들지 않더라도, 학생이 관심 있는 주제라면 무엇이든 함께 연구합니다.\n\n수학을 바탕으로 한 AI, 양자컴퓨터, 정보이론 등 각자의 관심사에서 출발해 논문을 읽고, 세미나에서 발표하며 연구 주제를 정해 갑니다.",
+    "detail_en": "Even outside the four areas above, we are happy to work on any topic a student is interested in.\n\nStarting from each student's own interests, such as the mathematical foundations of AI, quantum computing, or information theory, students read papers, present in seminars, and shape their own research questions.",
+    "keywords": [
+      "Student-driven topics"
+    ]
+  }
+]

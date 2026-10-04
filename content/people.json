@@ -1,0 +1,112 @@
+[
+  {
+    "name": "최환혁",
+    "name_en": "Whan-Hyuk Choi",
+    "role": "pi",
+    "degree": "",
+    "interests": [
+      "Algebraic coding theory",
+      "Deletion codes",
+      "DNA codes",
+      "Quantum information"
+    ],
+    "email": "whchoi@kangwon.ac.kr",
+    "homepage": "",
+    "photo": ""
+  },
+  {
+    "name": "장덕규",
+    "name_en": "Deokgyu Jang",
+    "role": "postdoc",
+    "degree": "",
+    "interests": [
+      "Coding theory"
+    ],
+    "email": "",
+    "homepage": "",
+    "photo": ""
+  },
+  {
+    "name": "노영건",
+    "name_en": "Younggeon Noh",
+    "role": "postdoc",
+    "degree": "",
+    "interests": [],
+    "email": "",
+    "homepage": "",
+    "photo": ""
+  },
+  {
+    "name": "김지혁",
+    "name_en": "Jihyeok Kim",
+    "role": "grad",
+    "degree": "ms",
+    "interests": [
+      "Quantum information",
+      "Coding theory"
+    ],
+    "email": "",
+    "homepage": "",
+    "photo": ""
+  },
+  {
+    "name": "이상구",
+    "name_en": "Sanggu Lee",
+    "role": "undergrad",
+    "degree": "",
+    "interests": [
+      "DNA codes"
+    ],
+    "email": "",
+    "homepage": "",
+    "photo": ""
+  },
+  {
+    "name": "헨리 로베르토",
+    "name_en": "Henrry Roberto",
+    "role": "undergrad",
+    "degree": "",
+    "interests": [
+      "Coding theory"
+    ],
+    "email": "",
+    "homepage": "",
+    "photo": ""
+  },
+  {
+    "name": "장환희",
+    "name_en": "Hwanhee Jang",
+    "role": "undergrad",
+    "degree": "",
+    "interests": [
+      "Combinatorics"
+    ],
+    "email": "",
+    "homepage": "",
+    "photo": ""
+  },
+  {
+    "name": "양재승",
+    "name_en": "Jaeseung Yang",
+    "role": "undergrad",
+    "degree": "",
+    "interests": [
+      "Quantum information"
+    ],
+    "email": "",
+    "homepage": "",
+    "photo": ""
+  },
+  {
+    "name": "박예지",
+    "name_en": "Yeji Park",
+    "role": "undergrad",
+    "degree": "",
+    "interests": [
+      "Quantum information"
+    ],
+    "email": "",
+    "homepage": "",
+    "photo": ""
+  }
+]

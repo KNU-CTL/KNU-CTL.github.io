@@ -1,0 +1,41 @@
+{
+  "name": "KNU Coding Theory Team",
+  "name_ko": "강원대학교 부호이론 연구팀",
+  "affiliation_ko": "강원대학교 수학과 최환혁 교수 연구팀",
+  "affiliation_en": "Prof. Whan-Hyuk Choi's Research Team, Department of Mathematics, Kangwon National University",
+  "tagline_ko": "Algebraic coding theory를 중심으로 삭제부호, DNA부호, 양자정보이론을 연구합니다.",
+  "tagline_en": "Centered on algebraic coding theory, we study deletion codes, DNA codes, and quantum information theory.",
+  "intro_ko": "KNU Coding Theory Team은 강원대학교 수학과 최환혁 교수 연구팀입니다. 유한체와 유한환 위의 선형부호, 자기쌍대부호처럼 대수적 구조를 가진 부호를 다루는 대수적 부호이론(algebraic coding theory)이 연구의 중심입니다. 이 구조를 바탕으로, 기호가 사라지는 채널을 위한 삭제부호, DNA에 정보를 저장하고 읽기 위한 DNA 부호, 양자 오류 정정과 양자 회로를 다루는 양자정보이론으로 연구를 넓혀 갑니다. 대수와 조합론의 도구로 부호를 설계하고, Magma와 Python으로 직접 계산해 확인합니다. 대학원생과 학부연구생이 정규 세미나에서 함께 공부하고 연구합니다.",
+  "intro_en": "The KNU Coding Theory Team is Prof. Whan-Hyuk Choi's research team in the Department of Mathematics at Kangwon National University. Our work is centered on algebraic coding theory: linear codes over finite fields and finite rings, self-dual codes, and other codes with rich algebraic structure. Building on this structure, we study deletion-correcting codes for channels that lose symbols, DNA codes for storing and reading information in DNA, and quantum information theory, including quantum error correction and quantum circuits. We design codes with tools from algebra and combinatorics and verify them by computation in Magma and Python. Graduate and undergraduate researchers study and work together in regular seminars.",
+  "email": "whchoi@kangwon.ac.kr",
+  "address_ko": "강원대학교 춘천캠퍼스 자연대5호관 213호",
+  "address_en": "Room 213, Natural Sciences Building 5, Kangwon National University, Chuncheon Campus",
+  "join_headline_ko": "부호와 양자 정보에 관심 있는 학생을 기다립니다.",
+  "join_headline_en": "We welcome students interested in codes and quantum information.",
+  "join_points": [
+    {
+      "ko": "강원대 수학과의 선형대수, 추상대수, 알고리즘 관련 강의를 재미있게 들었거나 듣고 있는 학생",
+      "en": "Students who have enjoyed, or are now taking, courses on linear algebra, abstract algebra, or algorithms in the KNU Department of Mathematics"
+    },
+    {
+      "ko": "수학을 기반으로 한 AI, 양자컴퓨터, 정보이론 등의 기초 이론 연구에 관심이 많은 학생",
+      "en": "Students interested in mathematical foundations of AI, quantum computing, information theory, and related fields"
+    },
+    {
+      "ko": "각자의 연구 관심사에 따라 논문을 읽고 연구하며 세미나에서 발표합니다.",
+      "en": "Read papers and do research according to your own interests, and present in our seminars"
+    },
+    {
+      "ko": "Python·Magma로 컴퓨터 계산을 직접 해봅니다.",
+      "en": "Carry out computations yourself in Python and Magma"
+    },
+    {
+      "ko": "학회·워크숍 발표와 논문 작성 기회가 있습니다.",
+      "en": "Opportunities to present at workshops and conferences and to co-author papers"
+    },
+    {
+      "ko": "연구 성과에 따라 다양한 장학금, 연구비 수혜를 받습니다.",
+      "en": "Scholarships and research funding are available based on research achievements"
+    }
+  ]
+}

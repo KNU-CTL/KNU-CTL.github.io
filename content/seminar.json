@@ -1,0 +1,61 @@
+{
+  "from": "2026-09-02",
+  "to": "2026-12-16",
+  "series": [
+    {
+      "id": "lunch",
+      "title_ko": "점심 세미나",
+      "title_en": "Lunch Seminar",
+      "desc_ko": "점심식사와 함께하는 세미나",
+      "desc_en": "A seminar over lunch",
+      "weekday": "1",
+      "time": "11:30–13:00",
+      "place_ko": "",
+      "place_en": ""
+    },
+    {
+      "id": "undergrad",
+      "title_ko": "학부연구생 세미나",
+      "title_en": "Undergraduate Seminar",
+      "desc_ko": "학부연구생 전원과 최환혁 교수가 함께하는 세미나",
+      "desc_en": "All undergraduate researchers with Prof. Whan-Hyuk Choi",
+      "weekday": "3",
+      "time": "09:00–11:00",
+      "place_ko": "",
+      "place_en": ""
+    },
+    {
+      "id": "researcher",
+      "title_ko": "연구원 세미나",
+      "title_en": "Researchers' Seminar",
+      "desc_ko": "장덕규 박사, 노영건 박사, 김지혁 대학원생, 최환혁 교수가 함께하는 세미나",
+      "desc_en": "Dr. Deokgyu Jang, Dr. Younggeon Noh, Jihyeok Kim, and Prof. Whan-Hyuk Choi",
+      "weekday": "4",
+      "time": "13:30–15:00",
+      "place_ko": "",
+      "place_en": ""
+    },
+    {
+      "id": "student",
+      "title_ko": "연구생 세미나",
+      "title_en": "Student Seminar",
+      "desc_ko": "학부연구생끼리 진행하는 세미나",
+      "desc_en": "Run by the undergraduate researchers themselves",
+      "weekday": "5",
+      "time": "18:00–20:00",
+      "place_ko": "",
+      "place_en": ""
+    }
+  ],
+  "sessions": [
+    {
+      "date": "2026-10-02",
+      "series": "student",
+      "speaker": "이상구, 양재승, 헨리 로베르토, 박예지, 장환희",
+      "topic": "",
+      "title_ko": "",
+      "title_en": ""
+    }
+  ],
+  "cancel": []
+}
