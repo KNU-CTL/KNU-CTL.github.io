@@ -296,7 +296,7 @@ section.block:nth-of-type(odd):not(.hero) { background: #fbfaff; }
 .people .person:nth-child(5n+3) .avatar { background: #a9dcca; }
 .people .person:nth-child(5n+4) .avatar { background: #cfc0ee; }
 .people .person:nth-child(5n+5) .avatar { background: #f3c6d6; }
-.person img.avatar { background: none; }
+.person img.avatar { background: none; object-position: 50% 28%; }
 
 /* 출간 */
 .chip.active { background: var(--p-lav); border-color: #cfc0ee; color: var(--p-lav-d); }
