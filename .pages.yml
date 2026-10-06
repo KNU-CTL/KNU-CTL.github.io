@@ -162,7 +162,7 @@ content:
 
   # ---------- 출간 ----------
   - name: publications
-    label: "출간 (학술지·학술대회 발표·특허)"
+    label: "출간 (학술지·학술대회 발표·특허·연구과제·수상)"
     type: file
     path: content/publications.json
     format: json
@@ -176,13 +176,22 @@ content:
             - { name: journal, label: "학술지" }
             - { name: conference, label: "학술대회 발표" }
             - { name: patent, label: "특허" }
-      - { name: year, label: "연도", type: number }
-      - { name: title, label: "제목", type: string, required: true }
+            - { name: grant, label: "연구과제" }
+            - { name: award, label: "수상" }
+      - { name: year, label: "연도 (특허는 출원 연도, 과제는 시작 연도)", type: number }
+      - { name: title, label: "제목 (학술지 논문은 여기에)", type: string }
+      - { name: title_ko, label: "제목 (한국어판, 비우면 위 제목)", type: string }
+      - { name: title_en, label: "제목 (영어판, 비우면 위 제목)", type: string }
       - { name: authors, label: "저자 (특허는 발명자)", type: string }
-      - { name: venue, label: "학술지·학회 이름 (특허는 번호)", type: string }
+      - { name: authors_ko, label: "저자 (한국어판, 비우면 위 저자)", type: string }
+      - { name: authors_en, label: "저자 (영어판, 비우면 위 저자)", type: string }
+      - { name: venue, label: "학술지·학회 이름 (특허는 번호, 과제는 기관·기간)", type: string }
+      - { name: venue_ko, label: "학술지·학회 등 (한국어판, 비우면 위)", type: string }
+      - { name: venue_en, label: "학술지·학회 등 (영어판, 비우면 위)", type: string }
       - { name: doi, label: "DOI 주소", type: string }
       - { name: pdf, label: "PDF 주소", type: string }
       - { name: arxiv, label: "arXiv 주소", type: string }
+      - { name: link, label: "기타 링크 (학회 페이지 등)", type: string }
       - { name: abstract, label: "초록", type: text }
       - { name: bibtex, label: "BibTeX", type: text }
       - { name: example, label: "예시 항목 (실제 항목은 끄기)", type: boolean }

@@ -24,8 +24,8 @@
       peopleLead: "함께 공부하고 연구하는 사람들입니다.",
       roles: { pi: "책임교수", postdoc: "박사후연구원", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
       pos: { pi: "책임교수", postdoc: "박사후연구원", ms: "석사과정", phd: "박사과정", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
-      pubLead: "연구팀의 학술지 논문, 학술대회 발표, 특허입니다.",
-      pubTypes: { all: "전체", journal: "학술지", conference: "학술대회 발표", patent: "특허" },
+      pubLead: "연구팀의 학술지 논문, 학술대회 발표, 특허, 연구과제, 수상입니다.",
+      pubTypes: { all: "전체", journal: "학술지", conference: "학술대회 발표", patent: "특허", grant: "연구과제", award: "수상" },
       example: "예시 항목", none: "아직 등록된 항목이 없습니다.",
       semLead: "매주 네 차례 정규 세미나를 엽니다. 발표 내용과 자료는 연구팀 안에서 공유합니다.",
       when: "언제", where: "어디서", period: "기간", every: function (w) { return "매주 " + "일월화수목금토"[w] + "요일"; },
@@ -56,8 +56,8 @@
       peopleLead: "The people who study and do research together.",
       roles: { pi: "Principal Investigator", postdoc: "Postdoctoral Researchers", grad: "Graduate Students", undergrad: "Undergraduate Researchers", alumni: "Alumni" },
       pos: { pi: "Principal Investigator", postdoc: "Postdoctoral Researcher", ms: "M.S. Student", phd: "Ph.D. Student", grad: "Graduate Student", undergrad: "Undergraduate Researcher", alumni: "Alumni" },
-      pubLead: "Journal articles, conference presentations, and patents from the team.",
-      pubTypes: { all: "All", journal: "Journal Articles", conference: "Conference Presentations", patent: "Patents" },
+      pubLead: "Journal articles, talks, patents, grants, and awards from the team.",
+      pubTypes: { all: "All", journal: "Journal Articles", conference: "Talks", patent: "Patents", grant: "Grants and Fellowships", award: "Awards" },
       example: "example entry", none: "No entries yet.",
       semLead: "We hold four regular seminars every week. Talk contents and slides are shared within the team.",
       when: "When", where: "Where", period: "Period", every: function (w) { return "Every " + ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][w]; },
@@ -279,7 +279,7 @@
 
   /* ---------- 출간 ---------- */
   function renderPublications() {
-    var TY = UI.pubTypes, order = ["journal", "conference", "patent"];
+    var TY = UI.pubTypes, order = ["journal", "conference", "patent", "grant", "award"];
     $("#app").innerHTML = pageHead("Publications", UI.pubLead) +
       '<section class="block" style="padding-top:0"><div class="container"><div class="filters" id="pubFilters">' +
       ["all"].concat(order).map(function (k) { return '<button class="chip' + (k === "all" ? " active" : "") + '" data-t="' + k + '">' + esc(TY[k]) + '</button>'; }).join("") +
@@ -295,10 +295,10 @@
           var id = "p" + (idx++), btn = [];
           if (p.abstract) btn.push('<button data-x="abs' + id + '">ABS</button>');
           if (p.bibtex) btn.push('<button data-x="bib' + id + '">BIB</button>');
-          ["pdf", "doi", "arxiv"].forEach(function (q) { if (p[q]) btn.push('<a href="' + esc(p[q]) + '">' + q.toUpperCase() + '</a>'); });
-          out += '<div class="pub"><div class="year">' + esc(p.year || "") + '</div><div><div class="ptitle">' + esc(p.title) +
-            (p.example ? '<span class="example">' + esc(UI.example) + '</span>' : "") + '</div><div class="authors">' + esc(p.authors) + '</div>' +
-            '<div class="venue">' + esc(p.venue) + '</div>' + (btn.length ? '<div class="pub-btns">' + btn.join("") + '</div>' : "") +
+          ["pdf", "doi", "arxiv", "link"].forEach(function (q) { if (p[q]) btn.push('<a href="' + esc(p[q]) + '">' + q.toUpperCase() + '</a>'); });
+          out += '<div class="pub"><div class="year">' + esc(p.year || "") + '</div><div><div class="ptitle">' + esc(T(p, "title")) +
+            (p.example ? '<span class="example">' + esc(UI.example) + '</span>' : "") + '</div>' + (T(p, "authors") ? '<div class="authors">' + esc(T(p, "authors")) + '</div>' : "") +
+            '<div class="venue">' + esc(T(p, "venue")) + '</div>' + (btn.length ? '<div class="pub-btns">' + btn.join("") + '</div>' : "") +
             (p.abstract ? '<div class="pub-extra" id="abs' + id + '">' + esc(p.abstract) + '</div>' : "") +
             (p.bibtex ? '<div class="pub-extra mono" id="bib' + id + '">' + esc(p.bibtex) + '</div>' : "") + '</div></div>';
         });
