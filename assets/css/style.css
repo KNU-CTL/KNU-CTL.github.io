@@ -319,3 +319,10 @@ section.block:nth-of-type(odd):not(.hero) { background: #fbfaff; }
 /* ---------- Research Digest ---------- */
 .nl-card .src, .article .src { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 4px; }
 .article .pub-btns { margin: 10px 0 18px; }
+.article .body h3 { font-size: 18px; margin-top: 26px; }
+.article .body table { border-collapse: collapse; margin: 14px 0; font-size: 15px; width: 100%; }
+.article .body th, .article .body td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+.article .body th { background: var(--bg-soft); }
+.article .body blockquote { margin: 16px 0; padding: 10px 16px; border-left: 4px solid var(--p-lav-d); background: var(--bg-soft); border-radius: 0 8px 8px 0; }
+.article .body hr { border: 0; border-top: 1px solid var(--line); margin: 26px 0; }
+.article .body a { word-break: break-all; }
