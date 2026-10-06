@@ -19,7 +19,7 @@
       cats: { seminar: "세미나", talk: "학회 발표", paper: "논문 게재", patent: "특허", news: "소식" },
       newsLead: "연구팀의 세미나, 학회 발표, 논문 게재 소식을 달마다 모아 전합니다.",
       digestLead: "연구 동향과 관련 논문: 연구 분야의 새 소식과 함께 읽을 논문을 골라 소개합니다.",
-      dcats: { all: "전체", news: "연구 뉴스", paper: "논문 소개" }, digestBack: "← Research Digest 목록", source: "출처",
+      dcats: { all: "전체", news: "연구 뉴스", paper: "논문 소개" }, digestBack: "← Research Digest 목록", source: "출처", aiNote: "이 뉴스레터는 AI가 수집하여 구성한 것입니다.",
       issue: function (y, m) { return y + "년 " + m + "월호"; }, items: function (n) { return n + "건"; },
       back: "← 뉴스레터 목록", notFound: "소식을 찾을 수 없습니다.",
       researchLead: "대수적 부호이론을 바탕으로 네 갈래의 연구를 하고, 학생이 관심 있는 주제도 함께 연구합니다.", demo: "체험: VT 부호로 사라진 한 비트 되찾기",
@@ -52,7 +52,7 @@
       cats: { seminar: "Seminar", talk: "Talk", paper: "Publication", patent: "Patent", news: "News" },
       newsLead: "Monthly news from the team: seminars, conference talks, and publications.",
       digestLead: "Research news from our fields and papers worth reading, selected by the team.",
-      dcats: { all: "All", news: "Research News", paper: "Paper Picks" }, digestBack: "← All digest posts", source: "Source",
+      dcats: { all: "All", news: "Research News", paper: "Paper Picks" }, digestBack: "← All digest posts", source: "Source", aiNote: "This newsletter was collected and compiled by AI.",
       issue: function (y, m) { return ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][m - 1] + " " + y; },
       items: function (n) { return n + (n === 1 ? " item" : " items"); },
       back: "← All newsletters", notFound: "News item not found.",
@@ -216,6 +216,7 @@
     if (!n) { $("#app").innerHTML = '<div class="container article"><a class="back" href="digest.html">' + esc(UI.digestBack) + '</a><p class="loading">' + esc(UI.notFound) + '</p></div>'; return; }
     document.title = T(n, "title") + " | KNU Coding Theory Team";
     $("#app").innerHTML = '<div class="container"><article class="article"><a class="back" href="digest.html">' + esc(UI.digestBack) + '</a>' +
+      '<p class="ai-note">' + esc(UI.aiNote) + '</p>' +
       '<div class="meta"><b>' + esc(UI.dcats[n.category] || n.category) + '</b>' + esc(UI.longDate(n.date)) + '</div>' +
       '<h1>' + esc(T(n, "title")) + '</h1>' + (T(n, "summary") ? '<p class="summary">' + esc(T(n, "summary")) + '</p>' : "") +
       (n.source ? '<p class="src">' + esc(UI.source) + ': ' + esc(n.source) + '</p>' : "") + digestLinks(n) +
