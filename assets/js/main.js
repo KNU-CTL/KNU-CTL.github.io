@@ -155,12 +155,12 @@
       '<p class="kicker">' + esc(UI.kicker) + '</p><h1>KNU Coding Theory Team</h1><p class="tagline">' + esc(T(s, "tagline")) + '</p>' +
       '<div class="hero-links"><a href="research.html">' + esc(UI.toResearch) + '</a><a href="join.html">' + esc(UI.toJoin) + '</a></div>' +
       '</div>' + heroFigure() + '</div></section>' +
-      '<section class="block"><div class="container">' + sectionHead(UI.about) + '<p class="prose">' + esc(T(s, "intro")) + '</p></div></section>' +
-      '<section class="block"><div class="container">' + sectionHead(UI.areas, '<a href="research.html">' + esc(UI.more) + '</a>') +
+      '<section class="block home-block"><div class="container">' + sectionHead(UI.about) + '<p class="prose wide">' + esc(T(s, "intro")) + '</p></div></section>' +
+      '<section class="block home-block"><div class="container">' + sectionHead(UI.areas, '<a href="research.html">' + esc(UI.more) + '</a>') +
       '<div class="areas">' + D.research.map(function (r, i) {
         return '<div class="area"><div class="num">0' + (i + 1) + '</div><h3><a href="research.html#' + esc(r.id) + '" style="color:inherit">' + esc(T(r, "title")) + '</a></h3><p>' + esc(T(r, "short")) + '</p></div>';
       }).join("") + '</div></div></section>' +
-      '<section class="block"><div class="container">' + sectionHead(UI.news, '<a href="news.html">' + esc(UI.allNews) + '</a>') +
+      '<section class="block home-block"><div class="container">' + sectionHead(UI.news, '<a href="news.html">' + esc(UI.allNews) + '</a>') +
       '<div class="cards">' + newsSorted().slice(0, 3).map(newsCard).join("") + '</div></div></section>';
   }
 
@@ -244,8 +244,8 @@
   function renderResearch() {
     $("#app").innerHTML = pageHead(LANG === "ko" ? UI.nav.research : "Research", UI.researchLead) +
       '<section class="block" style="padding-top:8px"><div class="container">' + D.research.map(function (r, i) {
-        var other = LANG === "en" ? r.title_ko : r.title_en;
-        return '<div class="area-detail" id="' + esc(r.id) + '"><div><div class="num">0' + (i + 1) + '</div><h2>' + esc(T(r, "title")) + '</h2><div class="sub">' + esc(other) + '</div></div>' +
+        var other = LANG === "en" ? "" : r.title_en;   /* 영어판에는 한국어 부제를 싣지 않음 (10. 6.) */
+        return '<div class="area-detail" id="' + esc(r.id) + '"><div><div class="num">0' + (i + 1) + '</div><h2>' + esc(T(r, "title")) + '</h2>' + (other ? '<div class="sub">' + esc(other) + '</div>' : "") + '</div>' +
           '<div>' + T(r, "detail").split(/\n\s*\n/).map(function (p) { return '<p>' + esc(p) + '</p>'; }).join("") +
           '<div class="keywords">' + (r.keywords || []).map(function (k) { return '<span>' + esc(k) + '</span>'; }).join("") + '</div></div></div>';
       }).join("") + '</div></section>' +

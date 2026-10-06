@@ -327,3 +327,7 @@ section.block:nth-of-type(odd):not(.hero) { background: #fbfaff; }
 .article .body hr { border: 0; border-top: 1px solid var(--line); margin: 26px 0; }
 .article .body a { word-break: break-all; }
 .article .ai-note { margin: 22px 0 0; padding: 8px 14px; font-size: 14px; color: var(--muted); background: var(--bg-soft); border-left: 4px solid var(--p-peach-d); border-radius: 0 8px 8px 0; }
+/* 첫 화면: 소개 글을 전체 너비에 맞추고 위아래 여백을 줄임 (10. 6.) */
+section.block.home-block { padding: 40px 0; }
+section.block.home-block + section.block.home-block { padding-top: 8px; }
+.prose.wide { max-width: none; }
