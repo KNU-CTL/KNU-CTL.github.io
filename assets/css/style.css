@@ -315,3 +315,7 @@ section.block:nth-of-type(odd):not(.hero) { background: #fbfaff; }
 
 /* 꼬리말 */
 .site-footer { background: #f6f5fc; border-top: 0; margin-top: 0; }
+
+/* ---------- Research Digest ---------- */
+.nl-card .src, .article .src { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 4px; }
+.article .pub-btns { margin: 10px 0 18px; }

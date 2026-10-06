@@ -9,7 +9,7 @@
   var LANG = document.documentElement.lang === "en" ? "en" : "ko";
   var BASE = LANG === "en" ? "../" : "";
   var page = document.body.getAttribute("data-page") || "home";
-  var D = {};   /* 불러온 내용: site, research, people, publications, seminar, news */
+  var D = {};   /* 불러온 내용: site, research, people, publications, seminar, news, digest */
 
   /* ---------- 고정 문구 ---------- */
   var UI = {
@@ -18,6 +18,8 @@
       about: "연구팀 소개", areas: "연구 분야", more: "자세히 보기 →", news: "최근 소식", allNews: "뉴스레터 전체 보기 →",
       cats: { seminar: "세미나", talk: "학회 발표", paper: "논문 게재", patent: "특허", news: "소식" },
       newsLead: "연구팀의 세미나, 학회 발표, 논문 게재 소식을 달마다 모아 전합니다.",
+      digestLead: "연구 동향과 관련 논문: 연구 분야의 새 소식과 함께 읽을 논문을 골라 소개합니다.",
+      dcats: { all: "전체", news: "연구 뉴스", paper: "논문 소개" }, digestBack: "← Research Digest 목록", source: "출처",
       issue: function (y, m) { return y + "년 " + m + "월호"; }, items: function (n) { return n + "건"; },
       back: "← 뉴스레터 목록", notFound: "소식을 찾을 수 없습니다.",
       researchLead: "대수적 부호이론을 바탕으로 네 갈래의 연구를 하고, 학생이 관심 있는 주제도 함께 연구합니다.", demo: "체험: VT 부호로 사라진 한 비트 되찾기",
@@ -49,6 +51,8 @@
       about: "About", areas: "Research Areas", more: "Learn more →", news: "Recent News", allNews: "All newsletters →",
       cats: { seminar: "Seminar", talk: "Talk", paper: "Publication", patent: "Patent", news: "News" },
       newsLead: "Monthly news from the team: seminars, conference talks, and publications.",
+      digestLead: "Research news from our fields and papers worth reading, selected by the team.",
+      dcats: { all: "All", news: "Research News", paper: "Paper Picks" }, digestBack: "← All digest posts", source: "Source",
       issue: function (y, m) { return ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][m - 1] + " " + y; },
       items: function (n) { return n + (n === 1 ? " item" : " items"); },
       back: "← All newsletters", notFound: "News item not found.",
@@ -101,7 +105,7 @@
   /* ---------- 머리말·꼬리말 ---------- */
   var NAV = [["index.html", "home", "Home"], ["research.html", "research", "Research"], ["people.html", "people", "People"],
              ["publications.html", "publications", "Publications"], ["seminars.html", "seminars", "Seminars"],
-             ["news.html", "news", "News"], ["join.html", "join", "Join"]];
+             ["news.html", "news", "News"], ["digest.html", "digest", "Digest"], ["join.html", "join", "Join"]];
   function otherLang() {
     var f = location.pathname.split("/").pop() || "index.html";
     if (!/\.html$/.test(f)) f = "index.html";
@@ -175,6 +179,51 @@
           '<div class="cards">' + g.items.map(newsCard).join("") + '</div></div>';
       }).join("") + '</div></section>';
   }
+  /* ---------- Research Digest: 연구 동향과 관련 논문 (content/digest.json) ---------- */
+  function digestSorted() { return (D.digest || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; }); }
+  function digestLinks(n) {
+    var b = [];
+    if (n.link) b.push('<a href="' + esc(n.link) + '">LINK</a>');
+    if (n.pdf) b.push('<a href="' + esc(media(n.pdf)) + '">PDF</a>');
+    return b.length ? '<div class="pub-btns">' + b.join("") + '</div>' : "";
+  }
+  function digestCard(n) {
+    var cover = n.cover ? '<img class="cover" src="' + esc(media(n.cover)) + '" alt="">' : "";
+    return '<a class="nl-card" href="digest.html?id=' + encodeURIComponent(n.id) + '">' + cover +
+      '<div class="meta"><b>' + esc(UI.dcats[n.category] || n.category) + '</b>' + esc(UI.longDate(n.date)) + '</div>' +
+      '<h3>' + esc(T(n, "title")) + '</h3><p>' + esc(T(n, "summary")) + '</p>' +
+      (n.source ? '<p class="src">' + esc(n.source) + '</p>' : "") + '</a>';
+  }
+  function renderDigest() {
+    var id = new URLSearchParams(location.search).get("id");
+    if (id) return renderDigestArticle(id);
+    var order = ["all", "news", "paper"];
+    $("#app").innerHTML = pageHead("Research Digest", UI.digestLead) +
+      '<section class="block" style="padding-top:0"><div class="container"><div class="filters" id="dgFilters">' +
+      order.map(function (k) { return '<button class="chip' + (k === "all" ? " active" : "") + '" data-t="' + k + '">' + esc(UI.dcats[k]) + '</button>'; }).join("") +
+      '</div><div id="dgList"></div></div></section>';
+    function draw(t) {
+      var L = digestSorted().filter(function (n) { return t === "all" || n.category === t; });
+      $("#dgList").innerHTML = L.length ? '<div class="cards">' + L.map(digestCard).join("") + '</div>' : '<div class="empty">' + esc(UI.none) + '</div>';
+    }
+    $$("#dgFilters .chip").forEach(function (c) {
+      c.addEventListener("click", function () { $$("#dgFilters .chip").forEach(function (d) { d.classList.remove("active"); }); c.classList.add("active"); draw(c.getAttribute("data-t")); });
+    });
+    draw("all");
+  }
+  function renderDigestArticle(id) {
+    var n = (D.digest || []).filter(function (x) { return x.id === id; })[0];
+    if (!n) { $("#app").innerHTML = '<div class="container article"><a class="back" href="digest.html">' + esc(UI.digestBack) + '</a><p class="loading">' + esc(UI.notFound) + '</p></div>'; return; }
+    document.title = T(n, "title") + " | KNU Coding Theory Team";
+    $("#app").innerHTML = '<div class="container"><article class="article"><a class="back" href="digest.html">' + esc(UI.digestBack) + '</a>' +
+      '<div class="meta"><b>' + esc(UI.dcats[n.category] || n.category) + '</b>' + esc(UI.longDate(n.date)) + '</div>' +
+      '<h1>' + esc(T(n, "title")) + '</h1>' + (T(n, "summary") ? '<p class="summary">' + esc(T(n, "summary")) + '</p>' : "") +
+      (n.source ? '<p class="src">' + esc(UI.source) + ': ' + esc(n.source) + '</p>' : "") + digestLinks(n) +
+      (n.cover ? '<img class="cover" src="' + esc(media(n.cover)) + '" alt="">' : "") +
+      '<div class="body">' + (T(n, "body") || "") + '</div></article></div>';
+    $$(".article .body img").forEach(function (im) { var s = im.getAttribute("src"); if (s && !/^https?:|^data:/.test(s)) im.setAttribute("src", media(s)); });
+  }
+
   function renderArticle(id) {
     var n = (D.news || []).filter(function (x) { return x.id === id; })[0];
     if (!n) { $("#app").innerHTML = '<div class="container article"><a class="back" href="news.html">' + esc(UI.back) + '</a><p class="loading">' + esc(UI.notFound) + '</p></div>'; return; }
@@ -415,14 +464,14 @@
   document.getElementById("site-header").innerHTML = header();
   $("#menuBtn").addEventListener("click", function () { $("#navLinks").classList.toggle("open"); });
   $("#app").innerHTML = '<div class="container loading">…</div>';
-  var files = ["site", "research", "people", "publications", "seminar", "news"];
+  var files = ["site", "research", "people", "publications", "seminar", "news", "digest"];
   Promise.all(files.map(function (f) {
     return fetch(BASE + "content/" + f + ".json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(f); return r.json(); });
   })).then(function (vals) {
     files.forEach(function (f, i) { D[f] = vals[i]; });
     document.getElementById("site-footer").innerHTML = footer();
     ({ home: renderHome, research: renderResearch, people: renderPeople, publications: renderPublications,
-       seminars: renderSeminars, news: renderNews, join: renderJoin })[page]();
+       seminars: renderSeminars, news: renderNews, digest: renderDigest, join: renderJoin })[page]();
     if (location.hash === "#selftest") selfTest();
   }).catch(function () {
     $("#app").innerHTML = '<div class="container loading">' + esc(UI.loadFail) + '</div>';

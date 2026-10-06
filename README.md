@@ -12,11 +12,12 @@
 index.html          첫 화면: 소개, 연구 분야(한 줄씩), 최근 소식(뉴스레터 카드 3개)
 research.html       연구 분야 자세한 설명, VT 부호 체험
 people.html         구성원(책임교수 / 박사후연구원 / 대학원생 / 학부연구생 / 졸업생)
-publications.html   출간: 학술지 / 학술대회 발표 / 특허
+publications.html   출간: 학술지 / 학술대회 발표 / 특허 / 연구과제 / 수상
 seminars.html       정규 세미나 4개(월·수·목·금)와 캘린더(월별, 이달의 발표·행사 목록)
-news.html           뉴스레터: 달마다 묶은 소식 카드. news.html?id=… 은 소식 한 건의 본문
+news.html           뉴스레터(연구팀 내부 소식): 달마다 묶은 소식 카드. news.html?id=… 은 소식 한 건의 본문
+digest.html         Research Digest(연구 동향과 관련 논문): 연구 뉴스 / 논문 소개 카드. digest.html?id=… 은 글 한 건
 join.html           참여 안내
-en/*.html           위 일곱 페이지의 영어 판
+en/*.html           위 여덟 페이지의 영어 판
 content/            ★ 홈페이지 내용(JSON). Pages CMS가 이 파일들을 고칩니다
   site.json           연구팀 이름, 소개, 연락처, 참여 안내
   research.json       연구 분야 4개
@@ -24,6 +25,7 @@ content/            ★ 홈페이지 내용(JSON). Pages CMS가 이 파일들을
   publications.json   출간
   seminar.json        학기 기간, 정규 세미나 목록(이름·요일·시간·장소), 날짜별 발표자, 휴강
   news.json           최근 소식(뉴스레터)
+  digest.json         Research Digest 글(연구 뉴스·논문 소개)
 media/              Pages CMS로 올린 그림(사진·대표 그림)이 저장되는 곳
 .pages.yml          Pages CMS 설정(입력 양식 정의)
 assets/js/main.js   화면 그리기(고칠 일이 거의 없음)
@@ -60,6 +62,11 @@ assets/css/style.css  디자인
 
 - 첫 화면에는 가장 최근 소식 3건이 카드로 나옵니다.
 - News 페이지에는 모든 소식이 달마다 묶여 나옵니다.
+
+### Research Digest 글 쓰기
+Pages CMS의 "Research Digest"에서 새 항목을 만듭니다. 종류는 "연구 뉴스"와 "논문 소개" 두 가지이고, 출처·원문 주소(LINK 단추)·PDF(PDF 단추)를 붙일 수 있습니다.
+- PDF는 공개(오픈 액세스) 논문이나 연구팀 자체 자료만 올립니다. 출판사 PDF는 올리지 말고 원문 주소만 적습니다.
+- 공개 원칙에 따라 진행 중인 연구의 세부 내용은 적지 않습니다.
 
 ### 정규 세미나 바꾸기
 "정규 세미나"에서 다음을 고칩니다.
