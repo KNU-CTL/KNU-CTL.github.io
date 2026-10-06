@@ -7,7 +7,7 @@
 (function () {
   "use strict";
   var LANG = document.documentElement.lang === "en" ? "en" : "ko";
-  var BASE = LANG === "en" ? "../" : "";
+  var BASE = LANG === "ko" ? "../" : "";   /* 영어판은 맨 위, 한국어판은 ko/ (2026. 10. 6.) */
   var page = document.body.getAttribute("data-page") || "home";
   var D = {};   /* 불러온 내용: site, research, people, publications, seminar, news, digest */
 
@@ -18,8 +18,8 @@
       about: "연구팀 소개", areas: "연구 분야", more: "자세히 보기 →", news: "최근 소식", allNews: "뉴스레터 전체 보기 →",
       cats: { seminar: "세미나", talk: "학회 발표", paper: "논문 게재", patent: "특허", news: "소식" },
       newsLead: "연구팀의 세미나, 학회 발표, 논문 게재 소식을 달마다 모아 전합니다.",
-      digestLead: "연구 동향과 관련 논문: 연구 분야의 새 소식과 함께 읽을 논문을 골라 소개합니다.",
-      dcats: { all: "전체", news: "연구 뉴스", paper: "논문 소개" }, digestBack: "← Research Digest 목록", source: "출처", aiNote: "이 뉴스레터는 AI가 수집하여 구성한 것입니다.",
+      digestLead: "Research Digest: 연구 분야의 새 소식과 함께 읽을 논문을 골라 소개합니다.",
+      dcats: { all: "전체", news: "연구 뉴스", paper: "논문 소개" }, digestBack: "← 연구 동향 목록", source: "출처", aiNote: "이 뉴스레터는 AI가 수집하여 구성한 것입니다.",
       issue: function (y, m) { return y + "년 " + m + "월호"; }, items: function (n) { return n + "건"; },
       back: "← 뉴스레터 목록", notFound: "소식을 찾을 수 없습니다.",
       researchLead: "대수적 부호이론을 바탕으로 네 갈래의 연구를 하고, 학생이 관심 있는 주제도 함께 연구합니다.", demo: "체험: VT 부호로 사라진 한 비트 되찾기",
@@ -40,6 +40,7 @@
       steps: [["세미나", "정규 세미나에서 논문을 읽고 발표합니다. 발표 자료는 LaTeX(Beamer)로 만들어 연구팀 안에서 공유합니다."],
               ["계산", "Python·Magma·SageMath로 작은 부호를 직접 계산하고, 결과를 전수 검사로 확인합니다."],
               ["정리와 발표", "결과를 짧은 노트로 정리해 워크숍·학회에서 발표하고, 논문으로 발전시킵니다."]],
+      nav: { home: "홈", research: "연구 분야", people: "구성원", publications: "연구 실적", seminars: "세미나", news: "소식", digest: "연구 동향", join: "참여 안내" },
       lang: "EN", langTitle: "English", loadFail: "내용을 불러오지 못했습니다. 홈페이지를 웹 서버(GitHub Pages 등)에서 열어 주세요.",
       d: { label: "이진어 x를 입력하세요 (길이 2–16)", code: "Varshamov–Tenengolts 부호 ", text: '는 한 비트가 사라져도 원래 단어를 되찾습니다. 아래에서 <b>지울 비트를 누르세요</b>.',
            two: "두 비트 이상 입력하세요.", mod: "법", del: function (i, b) { return i + "번째 비트(" + b + ")를 지운 수신어  y = "; },
@@ -74,6 +75,7 @@
       steps: [["Seminars", "Read and present papers in the regular seminar. Slides are made with LaTeX (Beamer) and shared within the team."],
               ["Computation", "Compute small codes with Python, Magma, and SageMath, and verify results by exhaustive checks."],
               ["Write-up & talks", "Summarize results in short notes, present them at workshops and conferences, and develop them into papers."]],
+      nav: { home: "Home", research: "Research", people: "People", publications: "Publications", seminars: "Seminars", news: "News", digest: "Digest", join: "Join" },
       lang: "한국어", langTitle: "한국어 페이지", loadFail: "Could not load the content. Please open the site from a web server (e.g. GitHub Pages).",
       d: { label: "Enter a binary word x (length 2–16)", code: "The Varshamov–Tenengolts code ", text: ' recovers the original word even if one bit is deleted. <b>Click a bit below to delete it</b>.',
            two: "Enter at least two bits.", mod: "modulus", del: function (i, b) { return "Delete bit " + i + " (" + b + "), received  y = "; },
@@ -109,12 +111,12 @@
   function otherLang() {
     var f = location.pathname.split("/").pop() || "index.html";
     if (!/\.html$/.test(f)) f = "index.html";
-    return (LANG === "en" ? "../" : "en/") + f + location.search;
+    return (LANG === "ko" ? "../" : "ko/") + f + location.search;
   }
   function header() {
     return '<div class="container nav"><a class="brand" href="index.html"><span class="brand-logo"><img src="' + BASE + 'assets/img/1.png" alt=""></span>KNU Coding Theory Team</a>' +
       '<div class="nav-right"><ul class="nav-links" id="navLinks">' +
-      NAV.map(function (n) { return '<li><a href="' + n[0] + '"' + (n[1] === page ? ' class="active"' : "") + '>' + n[2] + '</a></li>'; }).join("") +
+      NAV.map(function (n) { return '<li><a href="' + n[0] + '"' + (n[1] === page ? ' class="active"' : "") + '>' + esc(UI.nav[n[1]] || n[2]) + '</a></li>'; }).join("") +
       '</ul><a class="tool-btn" href="' + otherLang() + '" title="' + esc(UI.langTitle) + '">' + esc(UI.lang) + '</a>' +
       '<button class="tool-btn menu-btn" id="menuBtn" aria-label="menu">' + MENU + '</button></div></div>';
   }
@@ -172,7 +174,7 @@
       if (k !== key) { groups.push({ k: k, items: [] }); key = k; }
       groups[groups.length - 1].items.push(n);
     });
-    $("#app").innerHTML = pageHead("News", UI.newsLead) + '<section class="block" style="padding-top:8px"><div class="container">' +
+    $("#app").innerHTML = pageHead(LANG === "ko" ? UI.nav.news : "News", UI.newsLead) + '<section class="block" style="padding-top:8px"><div class="container">' +
       groups.map(function (g) {
         var a = g.k.split("-");
         return '<div class="issue"><div class="issue-head"><h2>' + esc(UI.issue(+a[0], +a[1])) + '</h2><span>' + esc(UI.items(g.items.length)) + '</span></div>' +
@@ -198,7 +200,7 @@
     var id = new URLSearchParams(location.search).get("id");
     if (id) return renderDigestArticle(id);
     var order = ["all", "news", "paper"];
-    $("#app").innerHTML = pageHead("Research Digest", UI.digestLead) +
+    $("#app").innerHTML = pageHead(LANG === "ko" ? "연구 동향" : "Research Digest", UI.digestLead) +
       '<section class="block" style="padding-top:0"><div class="container"><div class="filters" id="dgFilters">' +
       order.map(function (k) { return '<button class="chip' + (k === "all" ? " active" : "") + '" data-t="' + k + '">' + esc(UI.dcats[k]) + '</button>'; }).join("") +
       '</div><div id="dgList"></div></div></section>';
@@ -240,7 +242,7 @@
 
   /* ---------- 연구 ---------- */
   function renderResearch() {
-    $("#app").innerHTML = pageHead("Research", UI.researchLead) +
+    $("#app").innerHTML = pageHead(LANG === "ko" ? UI.nav.research : "Research", UI.researchLead) +
       '<section class="block" style="padding-top:8px"><div class="container">' + D.research.map(function (r, i) {
         var other = LANG === "en" ? r.title_ko : r.title_en;
         return '<div class="area-detail" id="' + esc(r.id) + '"><div><div class="num">0' + (i + 1) + '</div><h2>' + esc(T(r, "title")) + '</h2><div class="sub">' + esc(other) + '</div></div>' +
@@ -316,7 +318,7 @@
     return '<div class="person' + (isPI ? " pi" : "") + '">' + av + '<div>' + body + '</div></div>';
   }
   function renderPeople() {
-    var html = pageHead("People", UI.peopleLead) + '<section class="block" style="padding-top:0"><div class="container">';
+    var html = pageHead(LANG === "ko" ? UI.nav.people : "People", UI.peopleLead) + '<section class="block" style="padding-top:0"><div class="container">';
     ["pi", "postdoc", "grad", "undergrad", "alumni"].forEach(function (role) {
       var ps = D.people.filter(function (p) { return p.role === role; });
       if (!ps.length) return;
@@ -330,7 +332,7 @@
   /* ---------- 출간 ---------- */
   function renderPublications() {
     var TY = UI.pubTypes, order = ["journal", "conference", "patent", "grant", "award"];
-    $("#app").innerHTML = pageHead("Publications", UI.pubLead) +
+    $("#app").innerHTML = pageHead(LANG === "ko" ? UI.nav.publications : "Publications", UI.pubLead) +
       '<section class="block" style="padding-top:0"><div class="container"><div class="filters" id="pubFilters">' +
       ["all"].concat(order).map(function (k) { return '<button class="chip' + (k === "all" ? " active" : "") + '" data-t="' + k + '">' + esc(TY[k]) + '</button>'; }).join("") +
       '</div><div id="pubList"></div></div></section>';
@@ -390,7 +392,7 @@
   }
   function renderSeminars() {
     var S = D.seminar, now = new Date(), cur = new Date(now.getFullYear(), now.getMonth(), 1);
-    $("#app").innerHTML = pageHead("Seminars", UI.semLead) +
+    $("#app").innerHTML = pageHead(LANG === "ko" ? UI.nav.seminars : "Seminars", UI.semLead) +
       '<section class="block" style="padding-top:0"><div class="container">' +
       '<div class="sem-series">' + (S.series || []).map(function (r, i) {
         var note = [T(r, "desc"), T(r, "place")].filter(Boolean).join(" · ");
@@ -439,7 +441,7 @@
   /* ---------- 함께하기 ---------- */
   function renderJoin() {
     var s = D.site;
-    $("#app").innerHTML = pageHead("Join", UI.joinLead) +
+    $("#app").innerHTML = pageHead(LANG === "ko" ? UI.nav.join : "Join", UI.joinLead) +
       '<section class="block" style="padding-top:28px"><div class="container"><h2 class="title">' + esc(T(s, "join_headline")) + '</h2>' +
       '<ul class="join-list">' + (s.join_points || []).map(function (p) { return '<li>' + esc(p[LANG] || p.ko) + '</li>'; }).join("") + '</ul>' +
       '<a class="btn" href="mailto:' + esc(s.email) + '">' + esc(UI.mail) + '</a>' +
