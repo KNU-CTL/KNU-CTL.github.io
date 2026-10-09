@@ -49,12 +49,308 @@
   ],
   "sessions": [
     {
+      "date": "2011-12-09",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "POSTECH 부호이론 워크숍 (12. 9.–11., 포항공대)",
+      "title_en": "POSTECH Workshop on Coding Theory (Dec. 9–11, POSTECH, Pohang)"
+    },
+    {
+      "date": "2016-06-03",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "강원경기수학회 연례학술대회 (6. 3.–4., 강릉원주대)",
+      "title_en": "KKMS Annual Meeting (Jun. 3–4, Gangneung-Wonju National University)"
+    },
+    {
+      "date": "2016-08-04",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "",
+      "title_ko": "KNU SAGE Day (강원대 춘천)",
+      "title_en": "KNU SAGE Day (Kangwon National University, Chuncheon)"
+    },
+    {
+      "date": "2017-06-09",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "강원경기수학회·CMS 공동학술대회 (6. 9.–10., 단국대 천안)",
+      "title_en": "KKMS–CMS Joint Conference (Jun. 9–10, Dankook University, Cheonan)"
+    },
+    {
+      "date": "2017-10-27",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "",
+      "title_ko": "대한수학회 정기총회 및 가을 연구발표회 (10. 27.–29., 단국대 천안)",
+      "title_en": "KMS Annual Meeting (Oct. 27–29, Dankook University, Cheonan)"
+    },
+    {
+      "date": "2017-12-14",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "International Workshop on Computational Mathematics (12. 14.–17., 이화여대)",
+      "title_en": "International Workshop on Computational Mathematics (Dec. 14–17, Ewha Womans University, Seoul)"
+    },
+    {
+      "date": "2018-06-15",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "강원경기수학회 연례학술대회 (6. 15.–16., 대진대 포천)",
+      "title_en": "KKMS Annual Meeting (Jun. 15–16, Daejin University, Pocheon)"
+    },
+    {
+      "date": "2018-07-02",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "제5회 한중 부호이론 국제학술대회 (7. 2.–6., 중국 상하이대)",
+      "title_en": "5th Korea-Sino International Conference on Coding Theory (Jul. 2–6, Shanghai University, China)"
+    },
+    {
+      "date": "2019-07-05",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "제6회 한중 부호이론 국제학술대회 (7. 5.–8., 고등과학원)",
+      "title_en": "6th Korea-Sino International Conference on Coding Theory (Jul. 5–8, KIAS, Seoul)"
+    },
+    {
+      "date": "2020-07-04",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "대한수학회 봄 연구발표회 (온라인)",
+      "title_en": "KMS Spring Meeting (online)"
+    },
+    {
+      "date": "2021-04-29",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "dna",
+      "title_ko": "대한수학회 봄 연구발표회 (온라인)",
+      "title_en": "KMS Spring Meeting (online)"
+    },
+    {
+      "date": "2021-07-05",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "제7회 중한 부호이론 국제학술대회 (7. 5.–7., 중국 서북대 주최·온라인, 조직위원 최환혁)",
+      "title_en": "7th Sino-Korea International Conference on Coding Theory (Jul. 5–7, hosted by Northwest University, Xi'an, online; organizer W.-H. Choi)"
+    },
+    {
+      "date": "2021-08-25",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "dna",
+      "title_ko": "2021 EIMS 계산수학 국제학술대회 (8. 25.–27., 이화여대)",
+      "title_en": "2021 EIMS International Conference on Computational Mathematics (Aug. 25–27, Ewha Womans University)"
+    },
+    {
+      "date": "2021-10-21",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "대한수학회 가을 연구발표회 특별 분과: 대수적·조합적 부호이론 (온라인, 최환혁 조직)",
+      "title_en": "KMS Annual Meeting special session on algebraic and combinatorial coding theory (online; organized by W.-H. Choi)"
+    },
+    {
+      "date": "2022-07-06",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "제8회 한중 부호이론 국제학술대회 (7. 6.–8., 이화여대, 조직위원 최환혁)",
+      "title_en": "8th Korea-Sino International Conference on Coding Theory (Jul. 6–8, Ewha Womans University; organizer W.-H. Choi)"
+    },
+    {
+      "date": "2023-05-19",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "한국산업응용수학회 정기학술대회 (5. 19.–21., 평창 알펜시아)",
+      "title_en": "KSIAM Annual Meeting (May 19–21, Alpensia, Pyeongchang)"
+    },
+    {
+      "date": "2023-06-16",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "dna",
+      "title_ko": "강원경기수학회 연례학술대회",
+      "title_en": "KKMS Annual Meeting"
+    },
+    {
+      "date": "2023-08-18",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "ICIAM 2023 위성 학술대회: 부호이론과 응용 (8. 18.–19., 경북대)",
+      "title_en": "ICIAM 2023 Satellite Meeting on Coding Theory and its Applications (Aug. 18–19, Kyungpook National University)"
+    },
+    {
+      "date": "2023-10-20",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "제9회 중한 부호이론 국제학술대회 (10. 20.–22., 중국 난징항공항천대, 초청 강연)",
+      "title_en": "9th Sino-Korea International Conference on Coding Theory (Oct. 20–22, NUAA, Nanjing, China; invited talk)"
+    },
+    {
+      "date": "2024-03-15",
+      "series": "",
+      "speaker": "",
+      "topic": "",
+      "title_ko": "제2회 국제 부호이론 세미나 ICTS (인도 주관·온라인)",
+      "title_en": "2nd International Coding Theory Seminar, ICTS (hosted by India, online)"
+    },
+    {
+      "date": "2024-06-21",
+      "series": "",
+      "speaker": "",
+      "topic": "",
+      "title_ko": "제3회 국제 부호이론 세미나 ICTS (튀르키예 주관·온라인)",
+      "title_en": "3rd International Coding Theory Seminar, ICTS (hosted by Turkey, online)"
+    },
+    {
+      "date": "2024-06-21",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "강원경기수학회 연례학술대회 (강원대 춘천)",
+      "title_en": "KKMS Annual Meeting (Kangwon National University, Chuncheon)"
+    },
+    {
+      "date": "2024-08-26",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "coding",
+      "title_ko": "2024 KRIMS-EIMS 공동학술대회 (8. 26.–27., 엘리시안 강촌)",
+      "title_en": "2024 KRIMS-EIMS Joint Conference (Aug. 26–27, Elysian Gangchon, Chuncheon)"
+    },
+    {
+      "date": "2025-01-06",
+      "series": "",
+      "speaker": "최환혁, 장덕규",
+      "topic": "",
+      "title_ko": "2025 KRIMS 워크숍 (1. 6.–8., 서울 명동)",
+      "title_en": "2025 KRIMS Workshop (Jan. 6–8, Seoul)"
+    },
+    {
+      "date": "2025-02-17",
+      "series": "",
+      "speaker": "김지혁",
+      "topic": "quantum",
+      "title_ko": "한국양자정보학회 정기학술대회 (2. 17.–19.)",
+      "title_en": "Annual Meeting of the Quantum Information Society of Korea (Feb. 17–19)"
+    },
+    {
+      "date": "2025-02-26",
+      "series": "",
+      "speaker": "장덕규",
+      "topic": "",
+      "title_ko": "2025 KRIMS-IMDS 공동 심포지엄 (2. 26.–27., 강원대 춘천)",
+      "title_en": "2025 KRIMS-IMDS Joint Symposium (Feb. 26–27, Kangwon National University, Chuncheon)"
+    },
+    {
+      "date": "2025-05-16",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "quantum",
+      "title_ko": "한국산업응용수학회 봄 학술대회 (5. 16.–18., 건국대)",
+      "title_en": "KSIAM Spring Conference (May 16–18, Konkuk University, Seoul)"
+    },
+    {
+      "date": "2025-06-27",
+      "series": "",
+      "speaker": "",
+      "topic": "",
+      "title_ko": "제7회 국제 부호이론 세미나 ICTS (중국 주관·온라인)",
+      "title_en": "7th International Coding Theory Seminar, ICTS (hosted by China, online)"
+    },
+    {
+      "date": "2025-07-18",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "quantum",
+      "title_ko": "제11회 중한 부호이론 국제학술대회 (7. 18.–22., 중국 난카이대 톈진)",
+      "title_en": "11th Sino-Korea International Conference on Coding Theory (Jul. 18–22, Nankai University, Tianjin, China)"
+    },
+    {
+      "date": "2025-07-22",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "dna",
+      "title_ko": "2025 중한 부호이론 학술교류 세미나 (7. 22.–26., 중국 화중사범대 우한)",
+      "title_en": "2025 Sino-Korea Academic Exchange Seminar on Coding Theory (Jul. 22–26, CCNU, Wuhan, China)"
+    },
+    {
+      "date": "2025-12-19",
+      "series": "",
+      "speaker": "",
+      "topic": "",
+      "title_ko": "제9회 국제 부호이론 세미나 ICTS (한국 주관·온라인, 운영위원 최환혁)",
+      "title_en": "9th International Coding Theory Seminar, ICTS (hosted by Korea, online; local committee W.-H. Choi)"
+    },
+    {
+      "date": "2026-01-29",
+      "series": "",
+      "speaker": "최환혁, 김지혁",
+      "topic": "quantum",
+      "title_ko": "2026 KRIMS 워크숍: 양자 계산과 정보 (1. 29.–30., 강원대 춘천)",
+      "title_en": "2026 KRIMS Workshop on Quantum Computing & Information (Jan. 29–30, Kangwon National University, Chuncheon)"
+    },
+    {
+      "date": "2026-02-25",
+      "series": "",
+      "speaker": "김지혁",
+      "topic": "quantum",
+      "title_ko": "한국양자정보학회 정기학술대회",
+      "title_en": "Annual Meeting of the Quantum Information Society of Korea"
+    },
+    {
+      "date": "2026-04-23",
+      "series": "",
+      "speaker": "최환혁, 김지혁",
+      "topic": "",
+      "title_ko": "강원경기수학회 연례학술대회 (강원대 강릉캠퍼스)",
+      "title_en": "KKMS Annual Meeting (Kangwon National University, Gangneung Campus)"
+    },
+    {
+      "date": "2026-05-21",
+      "series": "",
+      "speaker": "김지혁",
+      "topic": "coding",
+      "title_ko": "IEICE 정보이론 연구회 (일본 교토)",
+      "title_en": "IEICE Technical Committee on Information Theory (Kyoto, Japan)"
+    },
+    {
+      "date": "2026-07-19",
+      "series": "",
+      "speaker": "최환혁",
+      "topic": "quantum",
+      "title_ko": "제12회 한중 부호이론 국제학술대회 (7. 19.–23., 강원대 춘천, 조직위원장 최환혁)",
+      "title_en": "12th Korea-Sino International Conference on Coding Theory (Jul. 19–23, Kangwon National University, Chuncheon; chair W.-H. Choi)"
+    },
+    {
       "date": "2026-10-02",
       "series": "student",
       "speaker": "이상구, 양재승, 헨리 로베르토, 박예지, 장환희",
       "topic": "",
       "title_ko": "",
       "title_en": ""
+    },
+    {
+      "date": "2026-10-02",
+      "series": "",
+      "speaker": "",
+      "topic": "",
+      "title_ko": "제12회 국제 부호이론 세미나 ICTS (싱가포르 주관·온라인)",
+      "title_en": "12th International Coding Theory Seminar, ICTS (hosted by Singapore, online)"
     }
   ],
   "cancel": []
