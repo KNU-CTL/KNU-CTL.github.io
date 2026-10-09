@@ -111,10 +111,11 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## 5. 게시 전에 확인할 것 (TODO)
 
-- [ ] `content/people.json`: 영문 이름 표기 확인(최환혁 Whan-Hyuk Choi, 장덕규 Deokgyu Jang, 노영건 Younggeon Noh, 이상구·장환희·양재승 — 추정 표기), 노영건 박사 관심 분야, 구성원 공개 동의
+- [x] `content/people.json`: 영문 이름 표기(노영건 Young Gun Roe, 나머지 교수님 확인 10. 9.), 노영건 박사 관심 분야(Coding theory)
+- [ ] 구성원 공개 동의
 - [ ] `content/seminar.json`: 학기 기간(지금 2026-09-02 ~ 2026-12-16은 임시), 세미나 장소
-- [ ] `content/news.json`: RIKEN 연수의 실제 날짜(지금 7/1로 넣음)
-- [ ] `content/publications.json`: 학술대회 발표·특허 추가, 논문 DOI·PDF 주소(지금은 arXiv 한 건만 연결)
+- [x] `content/news.json`: RIKEN-AIP Overseas Student Collaboration Program, 2026. 7. 27.–8. 7.(10. 9. 교수님 확인)
+- [x] `content/publications.json`: 논문 19편 DOI, arXiv 원고 4편 PDF(10. 9.). 나머지 논문의 PDF는 출판사 정책상 넣지 않음(오픈액세스 5편은 DOI에서 무료로 열림)
 - [ ] 영어 문장 검토(Claude 번역)
 - [ ] 공개 원칙(2절) 확인
 
@@ -141,4 +142,12 @@ python3 -m http.server 8000 --bind 127.0.0.1
 | `Yet_another_Bloch_sphere.svg` | https://commons.wikimedia.org/wiki/File:Yet_another_Bloch_sphere.svg | Qupybara | CC0 1.0 |
 | `DNA_simple2.svg` | https://commons.wikimedia.org/wiki/File:DNA_simple2.svg | Forluvoft | 퍼블릭 도메인 |
 
-로고 `assets/img/1.png`는 최환혁 교수 제공입니다.
+로고 `assets/img/1.png`는 최환혁 교수 제공입니다. 브라우저 탭 아이콘 `assets/img/icon_logo_48_claude2_20261009-2351.png`(48px)·`icon_logo_180_claude2_20261009-2351.png`(180px, 휴대폰 홈 화면용)은 이 로고의 그림 부분을 잘라 만들었습니다(2026. 10. 9.). 옛 아이콘 `favicon.svg`는 쓰지 않습니다.
+
+Research Digest 표지 그림(`media/`, 2026. 10. 9. 받음):
+
+| 파일 (`media/`) | 원본 | 작성자 | 이용 조건 |
+|---|---|---|---|
+| `digest_cover_open_access_claude2_20261009-2351.png` | https://commons.wikimedia.org/wiki/File:Open_Access_logo_PLoS_transparent.svg (SVG를 그림으로 바꾸고 여백을 더함) | PLoS 디자이너, 위키백과 사용자 Nina·Beao·JakobVoss 수정 | CC0 1.0 |
+| `digest_cover_earth_claude2_20261009-2351.jpg` | https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg (1280px 축소판) | NASA / Apollo 17 승무원 | 퍼블릭 도메인(미국 정부 저작물) |
+| `digest_cover_cube_claude2_20261009-2351.svg` | 위 `Numbered_3-cube_on_side.svg`의 사본 | Watchduck (Tilman Piesk) | CC0 1.0 |

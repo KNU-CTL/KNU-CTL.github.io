@@ -28,10 +28,12 @@
   },
   {
     "name": "노영건",
-    "name_en": "Younggeon Noh",
+    "name_en": "Young Gun Roe",
     "role": "postdoc",
     "degree": "",
-    "interests": [],
+    "interests": [
+      "Coding theory"
+    ],
     "email": "",
     "homepage": "",
     "photo": ""
