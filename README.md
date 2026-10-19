@@ -151,3 +151,4 @@ Research Digest 표지 그림(`media/`, 2026. 10. 9. 받음):
 | `digest_cover_open_access_claude2_20261009-2351.png` | https://commons.wikimedia.org/wiki/File:Open_Access_logo_PLoS_transparent.svg (SVG를 그림으로 바꾸고 여백을 더함) | PLoS 디자이너, 위키백과 사용자 Nina·Beao·JakobVoss 수정 | CC0 1.0 |
 | `digest_cover_earth_claude2_20261009-2351.jpg` | https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg (1280px 축소판) | NASA / Apollo 17 승무원 | 퍼블릭 도메인(미국 정부 저작물) |
 | `digest_cover_cube_claude2_20261009-2351.svg` | 위 `Numbered_3-cube_on_side.svg`의 사본 | Watchduck (Tilman Piesk) | CC0 1.0 |
+| `digest_cover_petersen_3coloring.svg` (2026. 10. 19.) | https://commons.wikimedia.org/wiki/File:Petersen_graph_3-coloring.svg (둘레에 흰 여백을 더함) | 위키백과 사용자 Chris-martin(2006), 색칠 수정 Michael Slone, 현재 판 Д.Ильин(2024) | 퍼블릭 도메인(PD-self) |
