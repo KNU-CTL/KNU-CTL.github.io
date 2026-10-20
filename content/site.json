@@ -10,32 +10,36 @@
   "email": "whchoi@kangwon.ac.kr",
   "address_ko": "강원대학교 춘천캠퍼스 자연대5호관 213호",
   "address_en": "Room 213, Natural Sciences Building 5, Kangwon National University, Chuncheon Campus",
-  "join_headline_ko": "부호와 양자 정보에 관심 있는 학생을 기다립니다.",
-  "join_headline_en": "We welcome students interested in codes and quantum information.",
+  "join_headline_ko": "부호이론과 양자 정보를 함께 연구할 학생과 연구자를 찾습니다.",
+  "join_headline_en": "We are looking for students and researchers to work with us on coding theory and quantum information.",
   "join_points": [
     {
-      "ko": "강원대 수학과의 선형대수, 추상대수, 알고리즘 관련 강의를 재미있게 들었거나 듣고 있는 학생",
-      "en": "Students who have enjoyed, or are now taking, courses on linear algebra, abstract algebra, or algorithms in the KNU Department of Mathematics"
+      "ko": "학부연구생: 선형대수·추상대수·알고리즘 강의를 재미있게 들었거나 듣고 있는 강원대 학생",
+      "en": "Undergraduate researchers: KNU students who have enjoyed, or are taking, courses in linear algebra, abstract algebra, or algorithms"
     },
     {
-      "ko": "수학을 기반으로 한 AI, 양자컴퓨터, 정보이론 등의 기초 이론 연구에 관심이 많은 학생",
-      "en": "Students interested in mathematical foundations of AI, quantum computing, information theory, and related fields"
+      "ko": "대학원생(석사·박사): 대수적 부호이론, 삭제 정정 부호, DNA 부호, 양자 정보, 수학 기반 AI의 기초 이론을 깊이 연구하고 싶은 학생",
+      "en": "Graduate students (M.S./Ph.D.): those who want to study algebraic coding theory, deletion-correcting codes, DNA codes, quantum information, or the mathematical foundations of AI in depth"
     },
     {
-      "ko": "각자의 연구 관심사에 따라 논문을 읽고 연구하며 세미나에서 발표합니다.",
-      "en": "Read papers and do research according to your own interests, and present in our seminars"
+      "ko": "박사후연구원: 부호이론, 양자 정보, 조합론 또는 관련 분야에서 박사 학위를 받았거나 받을 예정이며, 함께 연구하고 싶은 분",
+      "en": "Postdoctoral researchers: those with (or about to receive) a Ph.D. in coding theory, quantum information, combinatorics, or a related field who would like to work with us"
     },
     {
-      "ko": "Python·Magma로 컴퓨터 계산을 직접 해봅니다.",
-      "en": "Carry out computations yourself in Python and Magma"
+      "ko": "각자의 관심사에 따라 논문을 읽고 연구하며, 정기 세미나에서 발표하고 토론합니다. Python·Magma로 계산과 실험을 직접 합니다.",
+      "en": "Read papers and do research on your own interests, present and discuss in regular seminars, and carry out computations in Python and Magma."
     },
     {
-      "ko": "학회·워크숍 발표와 논문 작성 기회가 있습니다.",
-      "en": "Opportunities to present at workshops and conferences and to co-author papers"
+      "ko": "국내외 학회·워크숍 발표와 공동 논문 작성 기회가 있습니다.",
+      "en": "Opportunities to present at workshops and conferences and to co-author papers."
     },
     {
-      "ko": "연구 성과에 따라 다양한 장학금, 연구비 수혜를 받습니다.",
-      "en": "Scholarships and research funding are available based on research achievements"
+      "ko": "학생은 연구 성과에 따라 장학금과 연구비를 받을 수 있습니다. 박사후연구원으로 함께하고 싶은 분은 먼저 연락 주세요.",
+      "en": "Students may receive scholarships and research funding based on their achievements. If you are interested in joining us as a postdoc, please get in touch."
+    },
+    {
+      "ko": "문의: 관심 분야와 간단한 소개를 적어 메일로 보내 주세요. 연구자는 이력서(CV)와 연구 실적 목록을 함께 보내 주세요.",
+      "en": "Contact: email us with your interests and a short introduction. Researchers, please attach a CV and a list of publications."
     }
   ]
 }
