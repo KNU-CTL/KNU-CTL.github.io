@@ -442,7 +442,9 @@
   function renderJoin() {
     var s = D.site;
     $("#app").innerHTML = pageHead(LANG === "ko" ? UI.nav.join : "Join", UI.joinLead) +
-      '<section class="block" style="padding-top:28px"><div class="container"><h2 class="title">' + esc(T(s, "join_headline")) + '</h2>' +
+      '<section class="block" style="padding-top:28px"><div class="container">' +
+      (s.join_notice ? '<a class="join-notice" href="' + esc(s.join_notice.href) + '">' + esc(s.join_notice[LANG] || s.join_notice.ko) + '</a>' : "") +
+      '<h2 class="title">' + esc(T(s, "join_headline")) + '</h2>' +
       '<ul class="join-list">' + (s.join_points || []).map(function (p) { return '<li>' + esc(p[LANG] || p.ko) + '</li>'; }).join("") + '</ul>' +
       '<a class="btn" href="mailto:' + esc(s.email) + '">' + esc(UI.mail) + '</a>' +
       '<div class="steps">' + UI.steps.map(function (st, i) { return '<div><h3>0' + (i + 1) + ' ' + esc(st[0]) + '</h3><p>' + esc(st[1]) + '</p></div>'; }).join("") + '</div>' +

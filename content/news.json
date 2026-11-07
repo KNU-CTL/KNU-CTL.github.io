@@ -1,5 +1,16 @@
 [
   {
+    "id": "2026-11-07-undergrad-intern-recruit",
+    "date": "2026-11-07",
+    "category": "news",
+    "title_ko": "학부 인턴연구원 모집 (2026년 12월 ~ 2027년 8월)",
+    "title_en": "Undergraduate research interns wanted (December 2026 – August 2027)",
+    "summary_ko": "양자정보, 오류정정부호, AI를 활용한 자유 주제 가운데 하나를 연구할 학부 4학기 이상 수료생을 모집합니다. 선형대수학 B0 이상이면 신청할 수 있습니다.",
+    "summary_en": "We are recruiting undergraduates (four or more semesters completed, Linear Algebra B0 or higher) to research quantum information, error-correcting codes, or an AI-driven topic of their choice.",
+    "body_ko": "<p>수학과 부호이론 연구팀에서 2026년 12월부터 2027년 8월까지 함께 연구할 <strong>학부 인턴연구원</strong>을 모집합니다.</p><h3>모집 개요</h3><ul><li>참여 대상: 학부 4학기 이상 수료생</li><li>연구 기간: 2026년 12월 ~ 2027년 8월</li><li>신청 자격: 선형대수학 B0 이상 획득자</li></ul><h3>연구 내용</h3><p>다음 가운데 하나를 연구합니다.</p><ol><li>양자정보 이론 및 알고리즘 연구</li><li>오류정정부호 이론 연구</li><li>AI를 주요 도구로 사용하는 자유 연구 주제</li></ol><h3>연구 활동</h3><ul><li>매주 1회 연구 세미나, 학기 중 평균 월 1회 연구 발표</li><li>논문발표대회, 워크숍, TA 등 연구 관련 활동에 참여하면 연구비 추가 지원</li><li>학부생 수준에서 실제 연구 주제를 설정하고 탐구하는 경험</li><li>양자 컴퓨팅, 오류정정부호 등 첨단 수학 분야에 대한 이해</li><li>대학원 진학 및 향후 연구 활동을 위한 기초 지식 확보</li></ul><h3>이런 학생이라면 주저 없이 메일로 문의하세요</h3><ul><li>대학원 진학을 희망하는 학생</li><li>위 연구 내용에 관심 있는 학생</li><li>연구 경험을 쌓고 싶은 학생</li></ul><h3>지원 방법</h3><p>아래 메일로 간단히 연락 주시면 면담 일정을 잡고, 교수님·선배들과 이야기하며 연구 주제를 함께 정합니다.</p><ul><li>최환혁 교수: <a href=\"mailto:whchoi@kangwon.ac.kr\">whchoi@kangwon.ac.kr</a></li><li>김지혁 연구원: <a href=\"mailto:kimjhmth@kangwon.ac.kr\">kimjhmth@kangwon.ac.kr</a></li></ul>",
+    "body_en": "<p>The KNU Coding Theory Team (Department of Mathematics) is looking for <strong>undergraduate research interns</strong> to work with us from December 2026 to August 2027.</p><h3>Overview</h3><ul><li>Who: undergraduates who have completed at least four semesters</li><li>Period: December 2026 – August 2027</li><li>Requirement: a grade of B0 or higher in Linear Algebra</li></ul><h3>Research topics</h3><p>One of the following:</p><ol><li>Quantum information theory and quantum algorithms</li><li>Error-correcting code theory</li><li>A topic of your own choice that uses AI as a main tool</li></ol><h3>Activities</h3><ul><li>A weekly research seminar and, during the semester, about one research presentation a month</li><li>Additional research funding for taking part in student paper competitions, workshops, TA work, and other research activities</li><li>Experience in setting and pursuing a real research question at the undergraduate level</li><li>An introduction to advanced areas of mathematics such as quantum computing and error-correcting codes</li><li>A foundation for graduate study and future research</li></ul><h3>Don't hesitate to email us if you</h3><ul><li>are thinking about graduate school,</li><li>are interested in the topics above, or</li><li>want to gain research experience.</li></ul><h3>How to apply</h3><p>Send a short email to either address below. We will set up a meeting, and you will choose a research topic together with the professor and senior members.</p><ul><li>Prof. Whan-Hyuk Choi: <a href=\"mailto:whchoi@kangwon.ac.kr\">whchoi@kangwon.ac.kr</a></li><li>Jihyeok Kim (researcher): <a href=\"mailto:kimjhmth@kangwon.ac.kr\">kimjhmth@kangwon.ac.kr</a></li></ul>"
+  },
+  {
     "id": "2026-10-04-website",
     "date": "2026-10-04",
     "category": "news",

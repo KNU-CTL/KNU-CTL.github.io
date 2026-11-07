@@ -41,5 +41,10 @@
       "ko": "문의: 관심 분야와 간단한 소개를 적어 메일로 보내 주세요. 연구자는 이력서(CV)와 연구 실적 목록을 함께 보내 주세요.",
       "en": "Contact: email us with your interests and a short introduction. Researchers, please attach a CV and a list of publications."
     }
-  ]
+  ],
+  "join_notice": {
+    "ko": "2026–27 학부 인턴연구원을 모집하고 있습니다(2026년 12월 ~ 2027년 8월). 모집 안내 자세히 보기 →",
+    "en": "We are recruiting undergraduate research interns for December 2026 – August 2027. Read the full announcement →",
+    "href": "news.html?id=2026-11-07-undergrad-intern-recruit"
+  }
 }
