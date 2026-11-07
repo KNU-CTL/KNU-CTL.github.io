@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- Illustration of the card-game analogy for the PBR theorem (KNU Coding Theory Team, 2026). -->
+
+  <rect width="1600" height="900" fill="#f6f7f9"/>
+  <!-- 더미 A: 빨간 카드 -->
+  <circle cx="640" cy="470" r="330" fill="#fbe8ef" fill-opacity="0.85" stroke="#b54a73" stroke-width="5"/>
+  <!-- 더미 B: 에이스 -->
+  <circle cx="1040" cy="470" r="250" fill="#e6eefc" fill-opacity="0.75" stroke="#3f63b8" stroke-width="5"/>
+  <text x="520" y="105" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#b54a73" text-anchor="middle">Pile A · 26 red cards</text>
+  <text x="1215" y="195" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#3f63b8" text-anchor="middle">Pile B · 4 aces</text>
+
+  <g font-family="Georgia, serif" font-weight="700" text-anchor="middle">
+    <!-- A에만: 빨간 카드 -->
+    <g transform="translate(440 330) rotate(-8)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#c0392b">7</text><text y="40" font-size="56" fill="#c0392b">♥</text></g>
+    <g transform="translate(560 300) rotate(5)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#c0392b">K</text><text y="40" font-size="56" fill="#c0392b">♦</text></g>
+    <g transform="translate(410 520) rotate(4)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#c0392b">3</text><text y="40" font-size="56" fill="#c0392b">♦</text></g>
+    <g transform="translate(540 600) rotate(-6)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#c0392b">Q</text><text y="40" font-size="56" fill="#c0392b">♥</text></g>
+    <g transform="translate(650 450) rotate(9)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#c0392b">9</text><text y="40" font-size="56" fill="#c0392b">♥</text></g>
+    <!-- 겹침: 빨간 에이스 -->
+    <g transform="translate(860 400) rotate(-5)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#c0392b">A</text><text y="40" font-size="56" fill="#c0392b">♥</text></g>
+    <g transform="translate(870 560) rotate(6)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#c0392b">A</text><text y="40" font-size="56" fill="#c0392b">♦</text></g>
+    <!-- B에만: 검은 에이스 -->
+    <g transform="translate(1120 390) rotate(7)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#16191f">A</text><text y="40" font-size="56" fill="#16191f">♠</text></g>
+    <g transform="translate(1140 570) rotate(-4)"><rect x="-48" y="-68" width="96" height="136" rx="10" fill="#fff" stroke="#9aa1ad" stroke-width="2"/><text y="-22" font-size="40" fill="#16191f">A</text><text y="40" font-size="56" fill="#16191f">♣</text></g>
+  </g>
+  <line x1="870" y1="208" x2="850" y2="322" stroke="#16191f" stroke-width="3"/>
+  <text x="860" y="195" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#16191f" text-anchor="middle">overlap: red aces</text>
+  <text x="800" y="855" font-family="Helvetica, Arial, sans-serif" font-size="38" fill="#646b78" text-anchor="middle" font-style="italic">If states were only knowledge, some would overlap — PBR rules this out.</text>
+</svg>
