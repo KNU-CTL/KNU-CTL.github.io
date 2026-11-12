@@ -24,8 +24,8 @@
       back: "← 뉴스레터 목록", notFound: "소식을 찾을 수 없습니다.",
       researchLead: "대수적 부호이론을 바탕으로 네 갈래의 연구를 하고, 학생이 관심 있는 주제도 함께 연구합니다.", demo: "체험: VT 부호로 사라진 한 비트 되찾기",
       peopleLead: "함께 공부하고 연구하는 사람들입니다.",
-      roles: { pi: "책임교수", postdoc: "박사후연구원", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
-      pos: { pi: "책임교수", postdoc: "박사후연구원", ms: "석사과정", phd: "박사과정", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
+      roles: { pi: "책임교수", emeritus: "명예교수", postdoc: "박사후연구원", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
+      pos: { pi: "책임교수", emeritus: "강원대학교 명예교수", postdoc: "박사후연구원", ms: "석사과정", phd: "박사과정", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
       pubLead: "연구팀의 학술지 논문, 학술대회 발표, 특허, 연구과제, 수상입니다.",
       pubTypes: { all: "전체", journal: "학술지", conference: "학술대회 발표", patent: "특허", grant: "연구과제", award: "수상" },
       example: "예시 항목", none: "아직 등록된 항목이 없습니다.",
@@ -59,8 +59,8 @@
       back: "← All newsletters", notFound: "News item not found.",
       researchLead: "Grounded in algebraic coding theory, our research has four directions, and we also welcome topics of students' own interest.", demo: "Try it: recover a lost bit with a VT code",
       peopleLead: "The people who study and do research together.",
-      roles: { pi: "Principal Investigator", postdoc: "Postdoctoral Researchers", grad: "Graduate Students", undergrad: "Undergraduate Researchers", alumni: "Alumni" },
-      pos: { pi: "Principal Investigator", postdoc: "Postdoctoral Researcher", ms: "M.S. Student", phd: "Ph.D. Student", grad: "Graduate Student", undergrad: "Undergraduate Researcher", alumni: "Alumni" },
+      roles: { pi: "Principal Investigator", emeritus: "Professor Emeritus", postdoc: "Postdoctoral Researchers", grad: "Graduate Students", undergrad: "Undergraduate Researchers", alumni: "Alumni" },
+      pos: { pi: "Principal Investigator", emeritus: "Professor Emeritus, Kangwon National University", postdoc: "Postdoctoral Researcher", ms: "M.S. Student", phd: "Ph.D. Student", grad: "Graduate Student", undergrad: "Undergraduate Researcher", alumni: "Alumni" },
       pubLead: "Journal articles, talks, patents, grants, and awards from the team.",
       pubTypes: { all: "All", journal: "Journal Articles", conference: "Talks", patent: "Patents", grant: "Grants and Fellowships", award: "Awards" },
       example: "example entry", none: "No entries yet.",
@@ -319,7 +319,7 @@
   }
   function renderPeople() {
     var html = pageHead(LANG === "ko" ? UI.nav.people : "People", UI.peopleLead) + '<section class="block" style="padding-top:0"><div class="container">';
-    ["pi", "postdoc", "grad", "undergrad", "alumni"].forEach(function (role) {
+    ["pi", "emeritus", "postdoc", "grad", "undergrad", "alumni"].forEach(function (role) {
       var ps = D.people.filter(function (p) { return p.role === role; });
       if (!ps.length) return;
       html += '<h2 class="role-title">' + esc(UI.roles[role]) + '</h2>' +
