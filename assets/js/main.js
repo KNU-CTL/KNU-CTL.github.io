@@ -25,7 +25,7 @@
       researchLead: "대수적 부호이론을 바탕으로 네 갈래의 연구를 하고, 학생이 관심 있는 주제도 함께 연구합니다.", demo: "체험: VT 부호로 사라진 한 비트 되찾기",
       peopleLead: "함께 공부하고 연구하는 사람들입니다.",
       roles: { pi: "책임교수", emeritus: "명예교수", postdoc: "박사후연구원", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
-      pos: { pi: "책임교수", emeritus: "강원대학교 명예교수", postdoc: "박사후연구원", ms: "석사과정", phd: "박사과정", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
+      pos: { pi: "책임교수", emeritus: "강원대학교 명예교수", postdoc: "박사후연구원", research_prof: "연구교수", ms: "석사과정", phd: "박사과정", grad: "대학원생", undergrad: "학부연구생", alumni: "졸업생" },
       pubLead: "연구팀의 학술지 논문, 학술대회 발표, 특허, 연구과제, 수상입니다.",
       pubTypes: { all: "전체", journal: "학술지", conference: "학술대회 발표", patent: "특허", grant: "연구과제", award: "수상" },
       example: "예시 항목", none: "아직 등록된 항목이 없습니다.",
@@ -60,7 +60,7 @@
       researchLead: "Grounded in algebraic coding theory, our research has four directions, and we also welcome topics of students' own interest.", demo: "Try it: recover a lost bit with a VT code",
       peopleLead: "The people who study and do research together.",
       roles: { pi: "Principal Investigator", emeritus: "Professor Emeritus", postdoc: "Postdoctoral Researchers", grad: "Graduate Students", undergrad: "Undergraduate Researchers", alumni: "Alumni" },
-      pos: { pi: "Principal Investigator", emeritus: "Professor Emeritus, Kangwon National University", postdoc: "Postdoctoral Researcher", ms: "M.S. Student", phd: "Ph.D. Student", grad: "Graduate Student", undergrad: "Undergraduate Researcher", alumni: "Alumni" },
+      pos: { pi: "Principal Investigator", emeritus: "Professor Emeritus, Kangwon National University", postdoc: "Postdoctoral Researcher", research_prof: "Research Professor", ms: "M.S. Student", phd: "Ph.D. Student", grad: "Graduate Student", undergrad: "Undergraduate Researcher", alumni: "Alumni" },
       pubLead: "Journal articles, talks, patents, grants, and awards from the team.",
       pubTypes: { all: "All", journal: "Journal Articles", conference: "Talks", patent: "Patents", grant: "Grants and Fellowships", award: "Awards" },
       example: "example entry", none: "No entries yet.",
@@ -313,7 +313,7 @@
     if (p.email) links.push('<a href="mailto:' + esc(p.email) + '">Email</a>');
     if (p.homepage) links.push('<a href="' + esc(p.homepage) + '">Homepage</a>');
     var body = '<h3>' + esc(pName(p)) + '</h3>' +
-      '<div class="pos">' + esc(UI.pos[(p.role === "grad" && p.degree) || p.role] || p.role) + '</div>' +
+      '<div class="pos">' + esc(UI.pos[((p.role === "grad" || p.role === "postdoc") && p.degree) || p.role] || p.role) + '</div>' +
       '<div class="int">' + esc((p.interests || []).join(" · ")) + '</div>' + (links.length ? '<div class="links">' + links.join(" · ") + '</div>' : "");
     return '<div class="person' + (isPI ? " pi" : "") + '">' + av + '<div>' + body + '</div></div>';
   }
